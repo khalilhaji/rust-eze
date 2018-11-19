@@ -25,7 +25,7 @@ fn main() {
         };
 
         println!("You guessed: {}", guess);
-        guesses += 1;
+        guesses = guesses + 1;
 
         match guess.cmp(&secret_number) {
             std::cmp::Ordering::Less => println!("Too small!"),
