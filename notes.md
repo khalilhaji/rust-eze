@@ -62,3 +62,8 @@ Check if project will compile without outputting binary or running with: `cargo 
 		* Fixed size
 		* 
 
+### Ownership ###
+	* Rust has block-scope.
+	* If a variable is reassigned and the type does not have the Copy trait set, the value is moved to the new variable. The old variable is invalidated.
+	* Memory is automatically freed by calling drop function when the owner of a value goes out of scope.
+	* If `Copy` trait is set, reassignment copies the value as is the case with primitive/atomic types.
